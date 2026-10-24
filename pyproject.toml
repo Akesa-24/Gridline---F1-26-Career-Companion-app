@@ -1,0 +1,27 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "gridline"
+version = "0.1.0"
+description = "Multiplayer career companion for F1 25's 2026 Season Pack, driven by UDP telemetry"
+readme = "README.md"
+license = { text = "MIT" }
+requires-python = ">=3.10"
+dependencies = ["PySide6>=6.7", "requests>=2.31"]
+
+[project.optional-dependencies]
+dev = ["pytest>=8"]
+
+[project.gui-scripts]
+gridline = "gridline.app:main"
+
+[tool.setuptools.packages.find]
+include = ["gridline*"]
+
+[tool.setuptools.package-data]
+gridline = ["assets/*.sql", "assets/fonts/*"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]

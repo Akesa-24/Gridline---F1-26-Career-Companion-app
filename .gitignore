@@ -1,0 +1,12 @@
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+.idea/
+.pytest_cache/
+build/
+dist/
+*.spec
+*.gridcap
+*.egg-info/
+*.tar.gz
